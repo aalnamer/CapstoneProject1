@@ -1,0 +1,39 @@
+                                        Capstone Ideas Aymen 
+
+
+
+Stock News API
+https://stocknewsapi.com/
+
+	An idea I had is to create a Stocks News application. This API would display the most recent news, videos and relevant data about the top trending stocks.
+
+    I would then allow the user to use a search box to query through the data and filter a stock that they would want more information about. I can add filters to have stocks that have fallen the most in the past week, or stocks that are related to a certain topic, such as Tech or AutoMobile. 
+
+    Another Idea with this stock is to use the sentiment key they provide in their JSON to group all the positive and negative sentiments, and display how the stock prices were affected by this. 
+
+    The general workflow would also be using Flask and a server side set up to create requests through the application and display that information back to the user.
+
+
+Spoonacular API 
+https://spoonacular.com/food-api/docs
+
+    I found this Food API on the API list recommended by SpringBoard. The goal of using this API would be to create an app to take in Ingredients and return recipes with the Ingredients entered. 
+
+    I would be using a Flask application to retrieve data from the form provided by the application, then send information through the Flask app directly to the API. Everything would be handled server side and it would just display the information for the user. 
+
+    In regards to the flow, I would allow the user to enter Ingredients and send it as JSON to the api and return recipes that have exactly those ingredients. I would then return that JSON and display the different recipes to the user, as well as create filters for different types of food. The user can then edit their choices and it would send another request to reflect these edits.  
+
+
+
+Spotify API
+https://developer.spotify.com/documentation/web-api/
+
+    Similar to the project I just finished with the Playlist and Songs, the Spotify API would allow me to search through art, song title and artists to use in my Project.
+
+	Currently I would be using the Flask application to recreate the Spotify app. I would allow users to create a profile, like songs and add them to a list in their profile, and create playlists using an actual database. I do enjoy music so I think that this would be very interesting and fun to create. Following a similar structure to my other API project, I would use a server side set up to create a more efficient and safe application.
+
+	The flow of the application would be to have a homepage that displays the top trending songs of the week, as well as options to add those songs to a playlist/ to your liked song list. I understand that creating a user can be a hassle, so I may skip that part and allow the user to create playlists and music without creating an account.
+
+
+
+
