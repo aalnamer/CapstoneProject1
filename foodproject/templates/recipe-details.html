@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>{{title}}</h1>
+<img src="{{data['image']}}" />
+
+{% for dataset in data['steps']%}
+<li>{{dataset['step']}}</li>
+{%endfor%} {% endblock %}

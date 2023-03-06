@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block content %}
+<body>
+  <h1>Recipes</h1>
+  <div class="list-group">
+    <h2>We used the following for our base ingredients: {{ingredients}}</h2>
+    {% for dataset in data%}
+
+    <a
+      href="/recipe/{{dataset['id']}}/{{dataset['title']}}"
+      class="list-group-item list-group-item-action"
+      aria-current="true"
+    >
+      <div class="d-flex w-100 justify-content-between">
+        <h3 class="mb-1">{{dataset['title']}}</h3>
+      </div>
+      <p class="mb-1"><img src="{{dataset['image']}}" /></p>
+      <small>ID = {{dataset['id']}}</small>
+    </a>
+    {%endfor%}
+  </div>
+
+  <div><a href="/search-form">Go back</a></div>
+</body>
+{% endblock %} "https://spoonacular.com/recipeImages/632583-312x231.jpg"
