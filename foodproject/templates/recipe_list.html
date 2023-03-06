@@ -1,4 +1,5 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {%block title%} Recipe List {% endblock %} {% block
+content %}
 <body>
   <h1>Recipes</h1>
   <div class="list-group">
@@ -19,6 +20,6 @@
     {%endfor%}
   </div>
 
-  <div><a href="/search-form">Go back</a></div>
+  <div><a href="/findbyrecipe">Go back</a></div>
 </body>
-{% endblock %} "https://spoonacular.com/recipeImages/632583-312x231.jpg"
+{% endblock %}

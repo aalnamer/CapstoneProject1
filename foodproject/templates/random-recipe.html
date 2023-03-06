@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {%block title%} Recipe for {{title}} {% endblock %} {%
+block content %}
+
+<h1>{{data['title']}}</h1>
+
+<h1>Recipes</h1>
+<div class="list-group">
+  <a
+    href="/recipe/{{data['id']}}/{{data['title']}}"
+    class="list-group-item list-group-item-action"
+  >
+    <div class="d-flex w-100 justify-content-between">
+      <h3 class="mb-1">{{data['title']}}</h3>
+    </div>
+    <p class="mb-1"><img src="{{data['image']}}" /></p>
+    <small>ID = {{data['id']}}</small>
+  </a>
+</div>
+
+<a href="/">Back to Home</a>
+{% endblock %}

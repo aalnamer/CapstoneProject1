@@ -1,12 +1,18 @@
-{% extends 'base.html' %} {%block title%} Search By Ingredients {% endblock %}
-{% block content %}
+{% extends 'base.html' %} {%block title%} Random Recipe {% endblock %} {% block
+content %}
 <body>
   <div><h1>Enter Ingredients</h1></div>
 
   <div>
     <form method="POST">
-      {{ form.hidden_tag() }} {% for field in form if field.widget.input_type !=
-      'hidden' %}
+      {% with messages = get_flashed_messages() %} {% if messages %}
+      <ul class="flashes">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %} {% endwith %} {{ form.hidden_tag() }} {% for field in form if
+      field.widget.input_type != 'hidden' %}
       <p>
         {{ field.label }} {{ field(class_="form-control") }} {% for error in
         field.errors %}

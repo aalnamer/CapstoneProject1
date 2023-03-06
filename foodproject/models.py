@@ -1,4 +1,3 @@
-
 from flask_sqlalchemy import SQLAlchemy
 
 
@@ -36,4 +35,15 @@ class RecipeByIngredients(db.Model):
             "id" : self.id,
             "ingredients": self.ingredients,
             "number": self.number,
+        }
+        
+        
+class Recipe(db.Model):
+    __tablename__ = 'recipes'
+    table_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    id = db.Column(db.Integer, nullable = False)
+    
+    def serialize(self):
+        return{
+            "id" : self.id
         }
