@@ -16,6 +16,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-position: absolute;
 }
 .navbar {
   width: 85%;
@@ -193,11 +194,19 @@ a:visited {
   margin: 50px auto;
   font-weight: 100;
   line-height: 25px;
-  width: 100%;
   position: relative;
-  top: 0%;
   transform: translateY(-50%);
   text-align: center;
   color: white;
+  top: 10%;
+  bottom: 10%;
+}
+
+.steps {
   list-style-position: inside;
+  text-align: center;
+  font-weight: 100;
+  line-height: 25px;
+  font-size: 20px;
+  position: relative;
 }
