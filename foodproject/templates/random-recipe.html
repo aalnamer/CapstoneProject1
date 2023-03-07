@@ -1,16 +1,12 @@
 {% extends 'base.html' %} {%block title%} Recipe for {{title}} {% endblock %} {%
 block content %}
 
-<br />
 <div class="list">
   <h1>{{data['title']}}</h1>
   <br />
-  <a
-    href="/recipe/{{data['id']}}/{{data['title']}}"
-    class="list-group-item list-group-item-action"
-  >
+  <a href="/recipe/{{data['id']}}/{{data['title']}}">
     <div class="list-title">
-      <h3 class="mb-1">{{data['title']}}</h3>
+      <h3>{{data['title']}}</h3>
     </div>
     <p class="list-image"><img src="{{data['image']}}" /></p>
     <small class="list-id">ID = {{data['id']}}</small>

@@ -2,7 +2,7 @@
 {% block content %}
 
 <div>
-  <h1 class="heading">Enter Ingredients</h1>
+  <h1 class="heading-content">Enter Ingredients</h1>
   <form method="POST" class="form">
     {{ form.hidden_tag() }} {% for field in form if field.widget.input_type !=
     'hidden' %}

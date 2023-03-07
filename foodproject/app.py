@@ -31,10 +31,6 @@ def root():
     """Homepage"""
     return render_template("home.html")
 
-@app.route ("/ingredient-list")
-def show_ingredient_list():
-    """Displays List of Ingredients Page"""
-    return render_template("ingredients-list.html")
 
 
 @app.route("/findbyrecipe", methods = ['GET', 'POST'])
