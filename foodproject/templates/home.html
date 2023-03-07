@@ -1,4 +1,15 @@
 {% extends 'base.html' %} {%block title%} Home {% endblock%} {% block content %}
-<h1 class="display-1">Home</h1>
 
+<div class="content">
+  <h1>Recipe Generator</h1>
+  <p>Need Some Inspiration?</p>
+  <div>
+    <button type="button" onclick="location.href = '/findbyrecipe'">
+      <span></span>Ingredeints to Recipes
+    </button>
+    <button type="button" onclick="location.href = '/random'">
+      <span></span>Random Recipe
+    </button>
+  </div>
+</div>
 {% endblock %}

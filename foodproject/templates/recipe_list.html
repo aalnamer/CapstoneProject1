@@ -1,25 +1,33 @@
 {% extends 'base.html' %} {%block title%} Recipe List {% endblock %} {% block
 content %}
-<body>
+
+<div class="list">
   <h1>Recipes</h1>
-  <div class="list-group">
-    <h2>We used the following for our base ingredients: {{ingredients}}</h2>
-    {% for dataset in data%}
+  <br>
+  <h2>We used the following for our base ingredients:{{ingredients}}</h2>
+  <br>
+  {% for dataset in data%}
 
-    <a
-      href="/recipe/{{dataset['id']}}/{{dataset['title']}}"
-      class="list-group-item list-group-item-action"
-      aria-current="true"
-    >
-      <div class="d-flex w-100 justify-content-between">
-        <h3 class="mb-1">{{dataset['title']}}</h3>
-      </div>
-      <p class="mb-1"><img src="{{dataset['image']}}" /></p>
-      <small>ID = {{dataset['id']}}</small>
-    </a>
-    {%endfor%}
-  </div>
+  <a
+    href="/recipe/{{dataset['id']}}/{{dataset['title']}}"
+    class="list-group-item list-group-item-action"
+    aria-current="true"
+  >
+    <p class="list-title">
+      <h3 class="mb-1">{{dataset['title']}}</h3>
+    </p>
+    <p class='list-image'><img src="{{dataset['image']}}" /></p>
+    <small class = 'list-id'>ID = {{dataset['id']}}</small>
+  </a>
+  {%endfor%}
+  <p>
+    <button type="button" onclick="location.href = '/findbyrecipe'">
+      <span></span>Go back
+    </button>
+  </p>
+</div>
 
-  <div><a href="/findbyrecipe">Go back</a></div>
-</body>
+
+
+
 {% endblock %}

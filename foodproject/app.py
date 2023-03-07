@@ -56,11 +56,12 @@ def search_recipe():
 def show_recipe(id, title):
     """Shows Recipe using ID """
     res = requests.get(f'https://api.spoonacular.com/recipes/{id}/analyzedInstructions', params = {'apiKey' : API_KEY} )
-
+    res_summary = requests.get(f'https://api.spoonacular.com/recipes/{id}/summary') 
     # import pdb
     # pdb.set_trace()
     dataset = res.json()
     data=dataset[0]
+    
     return render_template("recipe-details.html", data = data, title = title)
 
 @app.route("/random", methods = ['GET', 'POST'])

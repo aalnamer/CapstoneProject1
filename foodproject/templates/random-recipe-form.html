@@ -1,10 +1,9 @@
 {% extends 'base.html' %} {%block title%} Random Recipe {% endblock %} {% block
 content %}
 <body>
-  <div><h1>Enter Ingredients</h1></div>
-
   <div>
-    <form method="POST">
+    <h1 class="heading">Random Recipe Generator</h1>
+    <form method="POST" class="form">
       {% with messages = get_flashed_messages() %} {% if messages %}
       <ul class="flashes">
         {% for message in messages %}
@@ -20,9 +19,12 @@ content %}
         {% endfor %}
       </p>
       {% endfor %}
-      <button>Submit</button>
+      <button><span></span>Submit</button>
     </form>
+    <button class="back" type="button" onclick="location.href = '/'">
+      <span></span>
+      Go Back
+    </button>
   </div>
-  <a href="/">Go back</a>
 </body>
 {% endblock %}

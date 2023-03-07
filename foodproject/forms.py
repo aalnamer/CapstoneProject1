@@ -17,7 +17,7 @@ class RandomRecipe(FlaskForm):
                                                             ('Paleo', 'Paleo')]
 ,
                                                             validators = [Optional()])
-    meal_type_tag = SelectField("Craving Desert?", choices =[ (None, 'Any'),                                                       ('main course', 'Main Course'),
+    meal_type_tag = SelectField("Craving Dessert?", choices =[ (None, 'Any'),                                                       ('main course', 'Main Course'),
                                                             ('side dish' , 'Side Dish'),
                                                             ('dessert' , 'Dessert'),
                                                             ('appetizer' , 'Appetizer'),

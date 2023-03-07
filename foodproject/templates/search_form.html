@@ -1,22 +1,23 @@
 {% extends 'base.html' %} {%block title%} Search By Ingredients {% endblock %}
 {% block content %}
-<body>
-  <div><h1>Enter Ingredients</h1></div>
 
-  <div>
-    <form method="POST">
-      {{ form.hidden_tag() }} {% for field in form if field.widget.input_type !=
-      'hidden' %}
-      <p>
-        {{ field.label }} {{ field(class_="form-control") }} {% for error in
-        field.errors %}
-        <span class="form-text text-danger">{{ error }}</span>
-        {% endfor %}
-      </p>
+<div>
+  <h1 class="heading">Enter Ingredients</h1>
+  <form method="POST" class="form">
+    {{ form.hidden_tag() }} {% for field in form if field.widget.input_type !=
+    'hidden' %}
+    <p>
+      {{ field.label }} {{ field(class_="form-control") }} {% for error in
+      field.errors %}
+      <span class="form-text text-danger">{{ error }}</span>
       {% endfor %}
-      <button>Submit</button>
-    </form>
-  </div>
-  <a href="/">Go back</a>
-</body>
+    </p>
+    {% endfor %}
+    <button><span></span>Submit</button>
+  </form>
+  <button class="back" type="button" onclick="location.href = '/'">
+    <span></span>
+    Go Back
+  </button>
+</div>
 {% endblock %}
