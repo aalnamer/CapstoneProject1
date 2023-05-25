@@ -4,7 +4,7 @@ Recipe Generator
 This Flask application uses the Spoonacular API to generate recipes based on ingredients provided as inputs. Users can enter the ingredients they have and the application will fetch recipes that can be made using those ingredients.
 
 Installation
-Clone the repository: git clone https://github.com/your-username/recipe-generator.git
+Clone the repository: git clone https://github.com/aalnamer/recipe-generator.git
 Navigate to the project directory: cd recipe-generator
 Create a virtual environment: python3 -m venv venv
 Activate the virtual environment:
